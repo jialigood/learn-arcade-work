@@ -86,6 +86,8 @@ else:
     print("score: ", score)
 print()
 
-print("final score: ", score)
+percent = score / 5 * 100
+print("final score:", score, "/5, ", percent, "%")
+print()
 print("good job ig")
 
