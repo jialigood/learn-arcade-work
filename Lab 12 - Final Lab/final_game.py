@@ -142,7 +142,7 @@ D. redmond""")
         bubbles()
         # text
         arcade.draw_text(result, 20, 400, arcade.color.DARK_GREEN, 36)
-        arcade.draw_text(result, 22, 402, arcade.color.WHITE, 36s)
+        arcade.draw_text(result, 22, 402, arcade.color.WHITE, 36)
 
 # calling first window function
 welcome_window()
