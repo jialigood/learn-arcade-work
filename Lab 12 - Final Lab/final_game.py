@@ -115,32 +115,40 @@ D. redmond""")
         percent = score / 5 * 100
         print("final score:", score, "/5, ", percent, "%")
         print()
-        print("good job ig")
 
-        if percent == 100:
-            # if you get 100%
-            arcade.open_window(600, 600, "drawing window")
-            arcade.set_background_color(arcade.color.LIGHT_PASTEL_PURPLE)
-            arcade.start_render()
-            # bubbles
-            bubbles()
-            # text
-            arcade.draw_text("PERFECTLY DONE!", 20, 360, arcade.color.WHITE, 60)
-            arcade.draw_text("PERFECTLY DONE!", 18, 361, arcade.color.ROYAL_PURPLE, 60)
-            arcade.draw_text("you got 100%", 182, 300, arcade.color.WHITE, 34)
-            arcade.draw_text("you got 100%", 180, 301, arcade.color.ROYAL_PURPLE, 34)
 
-        else:
-            # if you get less than 100%
-            result = f"ALMOST THERE! you got {percent}%"
-            arcade.open_window(600, 600, "drawing window")
-            arcade.set_background_color(arcade.color.PISTACHIO)
-            arcade.start_render()
-            # bubbles again
-            bubbles()
-            # text
-            arcade.draw_text(result, 20, 400, arcade.color.DARK_GREEN, 36)
-            arcade.draw_text(result, 22, 402, arcade.color.WHITE, 36)
+        def closing_window():
+            if percent == 100:
+                # if you get 100%
+                arcade.open_window(600, 600, "drawing window")
+                arcade.set_background_color(arcade.color.LIGHT_PASTEL_PURPLE)
+                arcade.start_render()
+                # bubbles
+                bubbles()
+                # text
+                arcade.draw_text("PERFECTLY DONE!", 20, 360, arcade.color.WHITE, 60)
+                arcade.draw_text("PERFECTLY DONE!", 18, 361, arcade.color.ROYAL_PURPLE, 60)
+                arcade.draw_text("you got 100%", 182, 300, arcade.color.WHITE, 34)
+                arcade.draw_text("you got 100%", 180, 301, arcade.color.ROYAL_PURPLE, 34)
+
+            else:
+                # if you get less than 100%
+                result = f"ALMOST THERE! you got {percent}%"
+                arcade.open_window(600, 600, "drawing window")
+                arcade.set_background_color(arcade.color.PISTACHIO)
+                arcade.start_render()
+                # bubbles again
+                bubbles()
+                # text
+                arcade.draw_text(result, 20, 400, arcade.color.DARK_GREEN, 36)
+                arcade.draw_text(result, 22, 402, arcade.color.WHITE, 36)
+# call closing window function
+        closing_window()
+        def print_good_job():
+            print("good job")
+
+        # call print statements
+        print_good_job()
 
 # calling first window function
 welcome_window()
